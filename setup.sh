@@ -32,7 +32,7 @@ az configure --defaults workspace=$WORKSPACE_NAME
 
 echo "Create an Azure Machine Learning BlobStorage:"
 # Crie uma conta de armazenamento
-az storage account create --name $storageAccountName --resource-group $RESOURCE_GROUP --location $location --sku Standard_LRS
+az storage account create --name $storageAccountName --resource-group $RESOURCE_GROUP --location $RANDOM_REGION --sku Standard_LRS
 
 echo "Create an Azure Machine Learning Container:"
 # Crie um container de blob
