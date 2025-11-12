@@ -12,7 +12,7 @@ REGION="eastus"
 WORKSPACE_NAME="mlw-dp100"
 COMPUTE_INSTANCE="ci${suffix}"
 COMPUTE_CLUSTER="aml-cluster"
-storageAccountName='sampleblobstorage2025'
+storageAccountName='sampleblobstorage${suffix}'
 containerName='sampleblobdp100'
 containerName2='secondcontainer'
 
