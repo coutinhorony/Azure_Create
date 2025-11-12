@@ -6,13 +6,13 @@ suffix=${guid//[-]/}
 suffix=${suffix:0:18}
 
 # Set the necessary variables
-RESOURCE_GROUP="rg-dp100-${suffix}"
+RESOURCE_GROUP="rg-dp100-l${suffix}"
 RESOURCE_PROVIDER="Microsoft.MachineLearningServices"
 REGION="eastus"
-WORKSPACE_NAME="mlw-dp100-${suffix}"
+WORKSPACE_NAME="mlw-dp100-l${suffix}"
 COMPUTE_INSTANCE="ci${suffix}"
-COMPUTE_CLUSTER="aml-cluster-${suffix}"
-storageAccountName="sampleblobstorage-${suffix}"
+COMPUTE_CLUSTER="aml-cluster"
+storageAccountName="sampleblobstorage${suffix}"
 containerName="sampleblobdp100"
 containerName2="secondcontainer"
 
