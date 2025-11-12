@@ -26,18 +26,21 @@ echo "Create a resource group and set as default:"
 az group create --name $RESOURCE_GROUP --location $RANDOM_REGION
 az configure --defaults group=$RESOURCE_GROUP
 
-# Crie uma conta de armazenamento
-az storage account create --name $storageAccountName --resource-group $resourceGroupName --location $location --sku Standard_LRS
-
-# Crie um container de blob
-az storage container create --name $containerName --account-name $storageAccountName
-
-# Crie um container de blob 2 
-az storage container create --name $containerName2 --account-name $storageAccountName
-
 echo "Create an Azure Machine Learning workspace:"
 az ml workspace create --name $WORKSPACE_NAME 
 az configure --defaults workspace=$WORKSPACE_NAME 
+
+echo "Create an Azure Machine Learning BlobStorage:"
+# Crie uma conta de armazenamento
+az storage account create --name $storageAccountName --resource-group $resourceGroupName --location $location --sku Standard_LRS
+
+echo "Create an Azure Machine Learning Container:"
+# Crie um container de blob
+az storage container create --name $containerName --account-name $storageAccountName
+
+echo "Create an Azure Machine Learning Containeir2:"
+# Crie um container de blob 2 
+az storage container create --name $containerName2 --account-name $storageAccountName
 
 # Create compute instance
 echo "Creating a compute instance with name: " $COMPUTE_INSTANCE
