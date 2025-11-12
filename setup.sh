@@ -6,15 +6,15 @@ suffix=${guid//[-]/}
 suffix=${suffix:0:18}
 
 # Set the necessary variables
-RESOURCE_GROUP="rg-dp100"
+RESOURCE_GROUP="rg-dp100-${suffix}"
 RESOURCE_PROVIDER="Microsoft.MachineLearningServices"
 REGION="eastus"
-WORKSPACE_NAME="mlw-dp100"
+WORKSPACE_NAME="mlw-dp100-${suffix}"
 COMPUTE_INSTANCE="ci${suffix}"
-COMPUTE_CLUSTER="aml-cluster"
-storageAccountName='sampleblobstorage${suffix}'
-containerName='sampleblobdp100'
-containerName2='secondcontainer'
+COMPUTE_CLUSTER="aml-cluster-${suffix}"
+storageAccountName="sampleblobstorage-${suffix}"
+containerName="sampleblobdp100"
+containerName2="secondcontainer"
 
 # Register the Azure Machine Learning resource provider in the subscription
 echo "Register the Machine Learning resource provider:"
